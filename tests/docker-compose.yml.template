@@ -1,0 +1,21 @@
+tester:
+  image: tutum/apache-php
+  links:
+   - shop
+  volumes:
+   - "./scripts:/scripts"
+   - "./logs:/logs"
+
+shop:
+  image: shopware-test:{VERSION}
+  links:
+   - db
+  expose:
+   - "80"
+
+db:
+  image: tutum/mysql:5.6
+  environment:
+   MYSQL_PASS: 123456
+
+
