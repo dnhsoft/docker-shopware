@@ -94,7 +94,7 @@ function logError($line)
 {
     $file = fopen(ERROR_LOG_FILENAME, 'a');
 
-    $str = '[' . date('Y-m-d h:i:s') . '] ';
+    $str = '[' . date('Y-m-d H:i:s') . '] ';
     $str .= $line;
     $str .= " \n";
 
