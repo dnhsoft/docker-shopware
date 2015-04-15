@@ -1,0 +1,54 @@
+shop434:
+  image: dnhsoft/shopware:4.3.4
+  links:
+   - db434
+  ports:
+   - "8001:80"
+  environment:
+   SWDB_HOST: db434
+db434:
+  image: tutum/mysql:5.6
+  environment:
+   MYSQL_PASS: 123456
+
+shop433:
+  image: dnhsoft/shopware:4.3.3
+  links:
+   - db433
+  ports:
+   - "8002:80"
+  environment:
+   SWDB_HOST: db433
+db433:
+  image: tutum/mysql:5.6
+  environment:
+   MYSQL_PASS: 123456
+
+shop432:
+  image: dnhsoft/shopware:4.3.2
+  links:
+   - db432
+  ports:
+   - "8003:80"
+  environment:
+   SWDB_HOST: db432
+db432:
+  image: tutum/mysql:5.6
+  environment:
+   MYSQL_PASS: 123456
+
+
+shop421:
+  image: dnhsoft/shopware:4.2.1
+  links:
+   - db421
+  ports:
+   - "8004:80"
+  environment:
+   SWDB_HOST: db421
+db421:
+  image: tutum/mysql:5.6
+  environment:
+   MYSQL_PASS: 123456
+
+

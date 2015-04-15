@@ -1,0 +1,18 @@
+shop:
+  image: dnhsoft/shopware:latest
+  links:
+   - db
+  ports:
+   - "8000:80"
+  volumes:
+   - ".logs:/shopware/logs"
+   - ".files:/shopware/files"
+   - ".media:/shopware/media"
+   - ".community-plugins:/shopware/engine/Shopware/Plugins/Community"
+
+db:
+  image: tutum/mysql:5.6
+  volumes:
+   - ".database:/var/lib/mysql"
+  environment:
+   MYSQL_PASS: 123456
