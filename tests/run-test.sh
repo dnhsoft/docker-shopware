@@ -15,11 +15,6 @@ docker-compose up -d
 
 echo "Starting init.sh..."
 
-if  [ "$1" == "dev" ]; then
-    # Hack for dev version: setup the database so that http://shop is accessible
-    docker exec tests_shop_1 sed -i "s/localhost:8000/shop/g" /swtools/shop.sql
-fi
-
 docker exec tests_shop_1 /swtools/init.sh
 
 docker exec tests_tester_1 bash -c "/scripts/check-shop.php $1"
