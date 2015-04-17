@@ -2,7 +2,7 @@ gmailer:
   image: dnhsoft/gmailer
   environment:
     MYHOSTNAME: "dnhsoft.com"
-    GMAILUSERNAME: "dnhsoft.mail.service"
-    GMAILPASSWORD: "dnhposhtasistemna123"
+    GMAILUSERNAME: "??"
+    GMAILPASSWORD: "??"
   volumes:
    - "./outbox:/outbox"

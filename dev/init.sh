@@ -39,7 +39,7 @@ unzip -n -q demo.zip
 rm demo.zip
 
 
-chown -R www-data.1000 /shopware
+chown -R www-data.www-data /shopware
 chmod 755 -R /shopware/cache
 chmod 755 -R /shopware/files
 chmod 755 -R /shopware/logs
