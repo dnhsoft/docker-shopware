@@ -16,3 +16,11 @@ db:
    - ".database:/var/lib/mysql"
   environment:
    MYSQL_PASS: 123456
+
+
+pma:
+  image: dnhsoft/phpmyadmin:4.4.3
+  links:
+   - db
+  ports:
+   - "8001:80"
