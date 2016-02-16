@@ -19,7 +19,7 @@ db:
 
 
 pma:
-  image: dnhsoft/phpmyadmin:4.4.3
+  image: dnhsoft/phpmyadmin:latest
   links:
    - db
   ports:

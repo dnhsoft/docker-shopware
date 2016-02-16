@@ -1,5 +1,5 @@
 shop:
-  image: dnhsoft/shopware:4.3.6
+  image: dnhsoft/shopware:5.1.3
   links:
    - db
   ports:
