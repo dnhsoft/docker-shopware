@@ -1,8 +1,0 @@
-gmailer:
-  image: dnhsoft/gmailer
-  environment:
-    MYHOSTNAME: "dnhsoft.com"
-    GMAILUSERNAME: "??"
-    GMAILPASSWORD: "??"
-  volumes:
-   - "./outbox:/outbox"

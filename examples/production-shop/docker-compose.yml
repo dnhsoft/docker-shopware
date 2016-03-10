@@ -1,14 +1,15 @@
 shop:
-  image: dnhsoft/shopware:latest
+  image: dnhsoft/shopware:5.1.3
   links:
    - db
-  ports:
-   - "8000:80"
   volumes:
    - ".logs:/shopware/logs"
    - ".files:/shopware/files"
    - ".media:/shopware/media"
    - ".community-plugins:/shopware/engine/Shopware/Plugins/Community"
+  environment:
+   VIRTUAL_HOST: 'mytestshop.com'
+
 
 db:
   image: tutum/mysql:5.6

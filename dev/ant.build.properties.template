@@ -1,7 +1,0 @@
-db.host=__SWDB_HOST__
-db.name=__SWDB_DATABASE__
-db.user=__SWDB_USER__
-db.password=__SWDB_PASS__
-db.port=__SWDB_PORT__
-app.path=
-app.host=__APP_HOST__
