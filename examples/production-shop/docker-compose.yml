@@ -3,12 +3,12 @@ shop:
   links:
    - db
   volumes:
-   - ".logs:/shopware/logs"
+   - ".log:/shopware/var/log"
    - ".files:/shopware/files"
    - ".media:/shopware/media"
    - ".community-plugins:/shopware/engine/Shopware/Plugins/Community"
-  environment:
-   VIRTUAL_HOST: 'mytestshop.com'
+  ports:
+   - "8000:80"
 
 
 db:
