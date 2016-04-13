@@ -1,5 +1,5 @@
 shop:
-  image: dnhsoft/shopware:5.1.4
+  image: dnhsoft/shopware:5.1.5
   links:
    - db
   volumes:
