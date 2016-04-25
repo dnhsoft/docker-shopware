@@ -10,4 +10,3 @@ db:
   environment:
    MYSQL_PASS: 123456
 
-

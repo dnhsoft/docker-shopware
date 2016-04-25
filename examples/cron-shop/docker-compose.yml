@@ -6,7 +6,6 @@ shop:
   ports:
    - "8000:80"
   environment:
-   TZ: "Europe/Sofia"
    SW_CRON: 1
 
 
