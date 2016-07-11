@@ -49,6 +49,10 @@ return array_replace_recursive([
             ]
         ]
     ],
+    'csrfProtection' => [
+        'frontend' => true,
+        'backend' => true
+    ],
     'snippet' => [
         'readFromDb' => getenv('SWSNIPPET_READ_FROM_DB') == '1' ? true : false,
         'writeToDb' => getenv('SWSNIPPET_WRITE_TO_DB') == '1' ?  true : false,
@@ -88,7 +92,11 @@ return array_replace_recursive([
     'store' => [
         'apiEndpoint' => 'https://api.shopware.com',
     ],
-    'plugins' => [],
+    'plugin_directories' => [
+        'Default'   => $this->AppPath('Plugins_' . 'Default'),
+        'Local'     => $this->AppPath('Plugins_' . 'Local'),
+        'Community' => $this->AppPath('Plugins_' . 'Community'),
+    ],
     'template' => [
         'compileCheck' => true,
         'compileLocking' => true,
@@ -119,14 +127,14 @@ return array_replace_recursive([
     'session' => [
         'name' => 'SHOPWARESID',
         'cookie_lifetime' => 0,
-        //'cookie_httponly' => 1,
-        'use_trans_sid' => false,
+        'cookie_httponly' => 1,
         'gc_probability' => 1,
         'gc_divisor' => 100,
-        'save_handler' => 'db'
+        'save_handler' => 'db',
+        'use_trans_sid' => 0,
     ],
     'phpsettings' => [
-        'error_reporting' => E_ALL,
+        'error_reporting' => E_ALL & ~E_USER_DEPRECATED,
         'display_errors' => 1,
         'date.timezone' => getenv('SWPHPSETTINGS_DATE_TIMEZONE'),
     ],
@@ -137,7 +145,7 @@ return array_replace_recursive([
             'lifetime' => 3600,
             'cache_id_prefix' => md5($this->getCacheDir())
         ],
-        'backend' => 'auto', // e.G auto, apc, xcache
+        'backend' => 'auto', // e.G auto, apcu, xcache
         'backendOptions' => [
             'hashed_directory_perm' => 0777 & ~umask(),
             'cache_file_perm' => 0666 & ~umask(),
@@ -155,16 +163,13 @@ return array_replace_recursive([
         'attributeDir' => $this->getCacheDir().'/doctrine/attributes',
         'proxyDir'     => $this->getCacheDir().'/doctrine/proxies',
         'proxyNamespace' => $this->App() . '\Proxies',
-        'cacheProvider' => 'auto', // supports null, auto, Apc, Array, Wincache and Xcache
+        'cacheProvider' => 'auto', // supports null, auto, Apcu, Array, Wincache and Xcache
         'cacheNamespace' => null // custom namespace for doctrine cache provider (optional; null = auto-generated namespace)
     ],
     'backendsession' => [
         'name' => 'SHOPWAREBACKEND',
-        //        'gc_maxlifetime' => 60 * 90,
         'cookie_lifetime' => 0,
         'cookie_httponly' => 1,
-        'use_trans_sid' => false,
-        'referer_check' => true,
-        'client_check' => false // true or false (is not compatible with firebug)
+        'use_trans_sid' => 0,
     ],
 ], $customConfig);
