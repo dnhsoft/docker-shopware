@@ -125,7 +125,6 @@ return array_replace_recursive([
         'cache_cookies' => ['shop', 'currency', 'x-cache-context-hash'],
     ],
     'session' => [
-        'name' => 'SHOPWARESID',
         'cookie_lifetime' => 0,
         'cookie_httponly' => 1,
         'gc_probability' => 1,
