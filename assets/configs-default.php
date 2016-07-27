@@ -75,6 +75,8 @@ return array_replace_recursive([
     'es' => [
         'prefix' => 'sw_shop',
         'enabled' => false,
+        'number_of_replicas' => null,
+        'number_of_shards' => null,
         'client' => [
             'hosts' => [
                 'localhost:9200'
@@ -134,7 +136,7 @@ return array_replace_recursive([
     ],
     'phpsettings' => [
         'error_reporting' => E_ALL & ~E_USER_DEPRECATED,
-        'display_errors' => 1,
+        'display_errors' => getenv('SWPHPSETTINGS_DISPLAY_ERRORS'),
         'date.timezone' => getenv('SWPHPSETTINGS_DATE_TIMEZONE'),
     ],
     'cache' => [
