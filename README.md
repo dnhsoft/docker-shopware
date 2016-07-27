@@ -1,9 +1,9 @@
 # Supported tags and respective `Dockerfile` links
-- `5.2.2-php7` [5.2.2-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.2-php7/Dockerfile
+- `5.2.2-php7` [5.2.2-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.2-php7/Dockerfile)
 - `5.2.2` [5.2.2/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.2/Dockerfile)
-- `5.2.1-php7` [5.2.1-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.1-php7/Dockerfile
+- `5.2.1-php7` [5.2.1-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.1-php7/Dockerfile)
 - `5.2.1` [5.2.1/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.1/Dockerfile)
-- `5.2.0-php7` [5.2.0-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.0-php7/Dockerfile
+- `5.2.0-php7` [5.2.0-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.0-php7/Dockerfile)
 - `5.2.0` [5.2.0/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.0/Dockerfile)
 - `5.1.6` [5.1.6/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.1.6/Dockerfile)
 - `5.1.5` [5.1.5/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.1.5/Dockerfile)
