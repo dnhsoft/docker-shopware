@@ -1,4 +1,6 @@
 # Supported tags and respective `Dockerfile` links
+- `5.2.8-php7` [5.2.8-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.8-php7/Dockerfile)
+- `5.2.8` [5.2.8/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.8/Dockerfile)
 - `5.2.7-php7` [5.2.7-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.7-php7/Dockerfile)
 - `5.2.7` [5.2.7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.7/Dockerfile)
 - `5.2.6-php7` [5.2.6-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.6-php7/Dockerfile)
