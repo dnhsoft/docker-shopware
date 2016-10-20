@@ -1,4 +1,11 @@
+# See examples of working Shopware instances with docker-compose.yml here:
+- [Example of standard Shopware configuration with a mysql 5.7 database, PhpMyAdmin and mail emulator](https://github.com/dnhsoft/sw-docker-demo/blob/master/04-shopware-db-pma-cron-mail/docker-compose.yml) 
+- [Example of multiple shops running at the same time](https://github.com/dnhsoft/sw-docker-demo/blob/master/05-multishops/docker-compose.yml)
+- [Example of how to develop a plugin locally](https://github.com/dnhsoft/sw-docker-demo/tree/master/06-develop-a-plugin)
+
 # Supported tags and respective `Dockerfile` links
+- `5.2.9-php7` [5.2.9-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.9-php7/Dockerfile)
+- `5.2.9` [5.2.9/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.9/Dockerfile)
 - `5.2.8-php7` [5.2.8-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.8-php7/Dockerfile)
 - `5.2.8` [5.2.8/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.8/Dockerfile)
 - `5.2.7-php7` [5.2.7-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.7-php7/Dockerfile)
