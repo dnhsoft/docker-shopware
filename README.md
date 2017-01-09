@@ -4,6 +4,8 @@
 - [Example of how to develop a plugin locally](https://github.com/dnhsoft/sw-docker-demo/tree/master/06-develop-a-plugin)
 
 # Supported tags and respective `Dockerfile` links
+- `5.2.13-php7` [5.2.13-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.13-php7/Dockerfile)
+- `5.2.13` [5.2.13/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.13/Dockerfile)
 - `5.2.12-php7` [5.2.12-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.12-php7/Dockerfile)
 - `5.2.12` [5.2.12/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.12/Dockerfile)
 - `5.2.11-php7` [5.2.11-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.2.11-php7/Dockerfile)
