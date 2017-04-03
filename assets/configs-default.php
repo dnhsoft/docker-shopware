@@ -50,8 +50,8 @@ return array_replace_recursive([
         ]
     ],
     'csrfProtection' => [
-        'frontend' => true,
-        'backend' => true
+        'frontend' => getenv('SWCSRFPROTECTION_FRONTEND') == '1' ? true : false,
+        'backend' => getenv('SWCSRFPROTECTION_BACKEND') == '1' ? true : false,
     ],
     'snippet' => [
         'readFromDb' => getenv('SWSNIPPET_READ_FROM_DB') == '1' ? true : false,
