@@ -1,3 +1,3 @@
 #!/bin/bash
 
-wget -O /shopware/shop.zip http://releases.s3.shopware.com.s3.amazonaws.com/install_5.2.24_2056ea7f0d0363e0d4c0678a4a68fc35db547965.zip
+wget -O /shopware/shop.zip http://releases.s3.shopware.com.s3.amazonaws.com/install_5.3.0_RC1_6f9db3a81a1b8bf2cd6a442e952f881c443091ff.zip
