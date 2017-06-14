@@ -1,5 +1,27 @@
 <?php
-// Load custom config
+/**
+ * Shopware 5
+ * Copyright (c) shopware AG
+ *
+ * According to our dual licensing model, this program can be used either
+ * under the terms of the GNU Affero General Public License, version 3,
+ * or under a proprietary license.
+ *
+ * The texts of the GNU Affero General Public License with an additional
+ * permission and of our proprietary license can be found at and
+ * in the LICENSE file you have received along with this program.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * "Shopware" is a registered trademark of shopware AG.
+ * The licensing of the program under the AGPLv3 does not imply a
+ * trademark license. Therefore any rights, title and interest in
+ * our trademarks remain entirely with us.
+ */
+
 if (file_exists($this->DocPath() . 'config_' . $this->Environment() . '.php')) {
     $customConfig = $this->loadConfig($this->DocPath() . 'config_' . $this->Environment() . '.php');
 } elseif (file_exists($this->DocPath() . 'config.php')) {
@@ -30,9 +52,9 @@ return array_replace_recursive([
                     'dir' => [
                         'public' => 0777 & ~umask(),
                         'private' => 0700 & ~umask(),
-                    ]
+                    ],
                 ],
-                'path' => realpath(__DIR__ . '/../../../')
+                'path' => realpath(__DIR__ . '/../../../'),
             ],
             'ftp' => [
                 'type' => 'ftp',
@@ -45,9 +67,9 @@ return array_replace_recursive([
                 'root' => '/',
                 'passive' => true,
                 'ssl' => false,
-                'timeout' => 30
-            ]
-        ]
+                'timeout' => 30,
+            ],
+        ],
     ],
     'csrfProtection' => [
         'frontend' => getenv('SWCSRFPROTECTION_FRONTEND') == '1' ? true : false,
@@ -70,7 +92,7 @@ return array_replace_recursive([
         'host' => getenv('SWDB_HOST'),
         'port' => getenv('SWDB_PORT'),
         'charset' => 'utf8',
-        'adapter' => 'pdo_mysql'
+        'adapter' => 'pdo_mysql',
     ],
     'es' => [
         'prefix' => 'sw_shop',
@@ -81,26 +103,26 @@ return array_replace_recursive([
         'wait_for_status' => 'green',
         'client' => [
             'hosts' => [
-                'localhost:9200'
-            ]
-        ]
+                'localhost:9200',
+            ],
+        ],
     ],
     'front' => [
-        'noErrorHandler' => getenv('SWFRONT_NO_ERROR_HANDLER') == '1' ? true : false,
-        'throwExceptions' => getenv('SWFRONT_THROW_EXCEPTIONS') == '1' ? true : false,
-        'disableOutputBuffering' => getenv('SWFRONT_DISABLE_OUTPUT_BUFFERING') == '1' ? true : false,
-        'showException' => getenv('SWFRONT_SHOW_EXCEPTION') == '1' ? true : false,
-        'charset' => 'utf-8'
+        'noErrorHandler' => false,
+        'throwExceptions' => false,
+        'disableOutputBuffering' => false,
+        'showException' => false,
+        'charset' => 'utf-8',
     ],
     'config' => [],
     'store' => [
         'apiEndpoint' => 'https://api.shopware.com',
     ],
     'plugin_directories' => [
-        'Default'            => $this->AppPath('Plugins_' . 'Default'),
-        'Local'              => $this->AppPath('Plugins_' . 'Local'),
-        'Community'          => $this->AppPath('Plugins_' . 'Community'),
-        'ShopwarePlugins'    => $this->DocPath('custom_plugins')
+        'Default' => $this->AppPath('Plugins_Default'),
+        'Local' => $this->AppPath('Plugins_Local'),
+        'Community' => $this->AppPath('Plugins_Community'),
+        'ShopwarePlugins' => $this->DocPath('custom_plugins'),
     ],
     'template' => [
         'compileCheck' => true,
@@ -110,11 +132,11 @@ return array_replace_recursive([
         'useIncludePath' => true,
         'charset' => 'utf-8',
         'forceCache' => false,
-        'cacheDir' => $this->getCacheDir().'/templates',
-        'compileDir' => $this->getCacheDir().'/templates',
+        'cacheDir' => $this->getCacheDir() . '/templates',
+        'compileDir' => $this->getCacheDir() . '/templates',
     ],
     'mail' => [
-        'charset' => 'utf-8'
+        'charset' => 'utf-8',
     ],
     'httpcache' => [
         'enabled' => true,
@@ -126,7 +148,7 @@ return array_replace_recursive([
         'allow_revalidate' => false,
         'stale_while_revalidate' => 2,
         'stale_if_error' => false,
-        'cache_dir' => $this->getCacheDir().'/html',
+        'cache_dir' => $this->getCacheDir() . '/html',
         'cache_cookies' => ['shop', 'currency', 'x-cache-context-hash'],
     ],
     'session' => [
@@ -148,28 +170,28 @@ return array_replace_recursive([
             'automatic_serialization' => true,
             'automatic_cleaning_factor' => 0,
             'lifetime' => 3600,
-            'cache_id_prefix' => md5($this->getCacheDir())
+            'cache_id_prefix' => md5($this->getCacheDir()),
         ],
         'backend' => 'auto', // e.G auto, apcu, xcache
         'backendOptions' => [
             'hashed_directory_perm' => 0777 & ~umask(),
             'cache_file_perm' => 0666 & ~umask(),
             'hashed_directory_level' => 3,
-            'cache_dir' => $this->getCacheDir().'/general',
-            'file_name_prefix' => 'shopware'
+            'cache_dir' => $this->getCacheDir() . '/general',
+            'file_name_prefix' => 'shopware',
         ],
     ],
     'hook' => [
-        'proxyDir' => $this->getCacheDir().'/proxies',
-        'proxyNamespace' => $this->App() . '_Proxies'
+        'proxyDir' => $this->getCacheDir() . '/proxies',
+        'proxyNamespace' => $this->App() . '_Proxies',
     ],
     'model' => [
         'autoGenerateProxyClasses' => false,
-        'attributeDir' => $this->getCacheDir().'/doctrine/attributes',
-        'proxyDir'     => $this->getCacheDir().'/doctrine/proxies',
+        'attributeDir' => $this->getCacheDir() . '/doctrine/attributes',
+        'proxyDir' => $this->getCacheDir() . '/doctrine/proxies',
         'proxyNamespace' => $this->App() . '\Proxies',
         'cacheProvider' => 'auto', // supports null, auto, Apcu, Array, Wincache and Xcache
-        'cacheNamespace' => null // custom namespace for doctrine cache provider (optional; null = auto-generated namespace)
+        'cacheNamespace' => null, // custom namespace for doctrine cache provider (optional; null = auto-generated namespace)
     ],
     'backendsession' => [
         'name' => 'SHOPWAREBACKEND',
