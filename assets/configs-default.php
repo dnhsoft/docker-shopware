@@ -146,7 +146,7 @@ return array_replace_recursive([
         'private_headers' => ['Authorization', 'Cookie'],
         'allow_reload' => getenv('SWHTTPCACHE_ALLOW_RELOAD') == '1' ? true : false,
         'allow_revalidate' => getenv('SWHTTPCACHE_ALLOW_REVALIDATE') == '1' ? true : false,
-        'stale_while_revalidate => getenv('SWHTTPCACHE_STALE_WHILE_REVALIDATE'),
+        'stale_while_revalidate' => getenv('SWHTTPCACHE_STALE_WHILE_REVALIDATE'),
         'stale_if_error' => getenv('SWHTTPCACHE_STALE_IF_ERROR') == '1' ? true : false,
         'cache_dir' => $this->getCacheDir() . '/html',
         'cache_cookies' => ['shop', 'currency', 'x-cache-context-hash'],
