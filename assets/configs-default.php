@@ -149,7 +149,7 @@ return array_replace_recursive([
         'stale_while_revalidate' => getenv('SWHTTPCACHE_STALE_WHILE_REVALIDATE'),
         'stale_if_error' => getenv('SWHTTPCACHE_STALE_IF_ERROR') == '1' ? true : false,
         'cache_dir' => $this->getCacheDir() . '/html',
-        'cache_cookies' => ['shop', 'currency', 'x-cache-context-hash'],
+        'cache_cookies' => explode('|', getenv('SWHTTPCACHE_CACHE_COOKIES')),
     ],
     'session' => [
         'cookie_lifetime' => 0,
