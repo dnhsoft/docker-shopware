@@ -91,7 +91,6 @@ return array_replace_recursive([
         'password' => getenv('SWDB_PASS'),
         'dbname' => getenv('SWDB_DATABASE'),
         'host' => getenv('SWDB_HOST'),
-        'port' => getenv('SWDB_PORT'),
         'charset' => 'utf8',
         'adapter' => 'pdo_mysql',
     ],
