@@ -95,15 +95,15 @@ return array_replace_recursive([
         'adapter' => 'pdo_mysql',
     ],
     'es' => [
-        'prefix' => getenv('SWES_PREFIX', true) ? getenv('SWES_PREFIX') : 'sw_shop',
+        'prefix' => getenv('SWES_PREFIX') ? getenv('SWES_PREFIX') : 'sw_shop',
         'enabled' => getenv('SWES_ENABLED') == '1' ? true : false,
         'write_backlog' => getenv('SWES_WRITE_BACKLOG') == '1' ? true : false,
-        'number_of_replicas' => getenv('SWES_NUM_REPLICAS', true) ? getenv('SWES_NUM_REPLICAS') : null,
-        'number_of_shards' => getenv('SWES_NUM_SHARDS', true) ? getenv('SWES_NUM_SHARDS') : null,
+        'number_of_replicas' => getenv('SWES_NUM_REPLICAS') ? getenv('SWES_NUM_REPLICAS') : null,
+        'number_of_shards' => getenv('SWES_NUM_SHARDS') ? getenv('SWES_NUM_SHARDS') : null,
         'wait_for_status' => 'green',
         'client' => [
             'hosts' => [
-                getenv('SWES_HOST', true) ? getenv('SWES_HOST') : 'localhost:9200',
+                getenv('SWES_HOST') ? getenv('SWES_HOST') : 'localhost:9200',
             ],
         ],
     ],
