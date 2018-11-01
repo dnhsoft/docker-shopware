@@ -139,6 +139,7 @@ return array_replace_recursive([
         'number_of_replicas' => getenv('SWES_NUM_REPLICAS') ? getenv('SWES_NUM_REPLICAS') : null,
         'number_of_shards' => getenv('SWES_NUM_SHARDS') ? getenv('SWES_NUM_SHARDS') : null,
         'total_fields_limit' => null,
+        'max_result_window' => 10000,
         'wait_for_status' => 'green',
         'batchsize' => 500,
         'backend' => [
@@ -363,6 +364,12 @@ return array_replace_recursive([
                 ],
             ],
         ],
+    ],
+    'backward_compatibility' => [
+        /*
+         * @deprecated since 5.5, sorting will be default and this parameter will be removed with Shopware 5.6
+         */
+        'predictable_plugin_order' => false,
     ],
     'logger' => [
         'level' => $this->Environment() !== 'production' ? Logger::DEBUG : Logger::ERROR
