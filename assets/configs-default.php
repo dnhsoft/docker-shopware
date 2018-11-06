@@ -363,6 +363,7 @@ return array_replace_recursive([
                     'BI' => 'verdanaz.ttf',
                 ],
             ],
+            'format' => 'A4',
         ],
     ],
     'backward_compatibility' => [
