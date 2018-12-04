@@ -94,6 +94,7 @@ return array_replace_recursive([
 
                 'bucket' => '',
                 'region' => '',
+                'endpoint' => null,
                 'credentials' => [
                     'key' => '',
                     'secret' => '',
