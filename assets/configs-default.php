@@ -152,6 +152,13 @@ return array_replace_recursive([
                 getenv('SWES_HOST') ? getenv('SWES_HOST') : 'localhost:9200',
             ],
         ],
+        'logger' => [
+            'level' => $this->Environment() !== 'production' ? Logger::DEBUG : Logger::ERROR,
+        ],
+        'max_expansions' => [
+            'name' => 2,
+            'number' => 2,
+        ],
     ],
     'front' => [
         'noErrorHandler' => getenv('SWFRONT_NO_ERROR_HANDLER') == '1' ? true : false,
@@ -234,6 +241,7 @@ return array_replace_recursive([
            'cof',
            'siteurl',
            '_ga',
+           'fbclid',         // Facebook
         ],
     ],
     'bi' => [
