@@ -295,8 +295,9 @@ return array_replace_recursive([
         'attributeDir' => $this->getCacheDir() . '/doctrine/attributes',
         'proxyDir' => $this->getCacheDir() . '/doctrine/proxies',
         'proxyNamespace' => $this->App() . '\Proxies',
-        'cacheProvider' => 'auto', // supports null, auto, Apcu, Array, Wincache, Xcache and redis
-        'cacheNamespace' => null, // custom namespace for doctrine cache provider (optional; null = auto-generated namespace)
+        'cacheProvider' => 'auto', // Supports null, auto, Apcu, Array, Wincache, Xcache and redis
+        'cacheNamespace' => null, // Custom namespace for doctrine cache provider (optional; null = auto-generated namespace)
+        'validOperators' => [], // Additional allowed QueryBuilder operators
     ],
     'backendsession' => [
         'name' => 'SHOPWAREBACKEND',
@@ -378,9 +379,14 @@ return array_replace_recursive([
             'format' => 'A4',
         ],
     ],
+    'media' => [
+        'whitelist' => [],
+    ],
     'backward_compatibility' => [
         /*
-         * @deprecated since 5.5, sorting will be default and this parameter will be removed with Shopware 5.6
+         * @deprecated since Shopware 5.5
+         *
+         * Sorting of plugins will be active by default in 5.6 and this parameter will be removed with Shopware 5.7
          */
         'predictable_plugin_order' => false,
     ],
