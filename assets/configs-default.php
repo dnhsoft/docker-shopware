@@ -215,13 +215,10 @@ return array_replace_recursive([
         'stale_if_error' => getenv('SWHTTPCACHE_STALE_IF_ERROR') == '1' ? true : false,
         'cache_dir' => $this->getCacheDir() . '/html',
         'cache_cookies' => explode('|', getenv('SWHTTPCACHE_CACHE_COOKIES')),
-/*
- * The "ignored_url_parameters" configuration will spare your Shopware system from recaching a page when any
- * of the parameters listed here is matched. This allows the caching system to be more efficient regarding  performance.
- *
- * Uncomment the following parameters to enable recommended suggestions.
- * NOTE: The following set of parameters will be added as default in Shopware 5.4
- */
+        /*
+         * The "ignored_url_parameters" configuration will spare your Shopware system from re-caching a page when any
+         * of the parameters listed here is matched. This allows the caching system to be more efficient.
+         */
         'ignored_url_parameters' => [
            'pk_campaign',    // Piwik
            'piwik_campaign',
