@@ -21,6 +21,7 @@
  * trademark license. Therefore any rights, title and interest in
  * our trademarks remain entirely with us.
  */
+
 use Shopware\Components\Logger;
 
 if (file_exists($this->DocPath() . 'config_' . $this->Environment() . '.php')) {
@@ -37,6 +38,11 @@ if (!is_array($customConfig)) {
 
 return array_replace_recursive([
     'custom' => [],
+
+    /*
+     * For more information on working with reverse proxies and trusted headers see
+     * https://symfony.com/doc/current/deployment/proxies.html
+     */
     'trustedproxies' => [],
     'trustedheaderset' => -1,
 
@@ -160,6 +166,7 @@ return array_replace_recursive([
             'name' => 2,
             'number' => 2,
         ],
+        'debug' => false,
     ],
     'front' => [
         'noErrorHandler' => getenv('SWFRONT_NO_ERROR_HANDLER') == '1' ? true : false,
@@ -172,7 +179,7 @@ return array_replace_recursive([
     'store' => [
         'apiEndpoint' => 'https://api.shopware.com',
         'timeout' => 7,
-        'connect_timeout' => 5
+        'connect_timeout' => 5,
     ],
     'plugin_directories' => [
         'Default' => $this->AppPath('Plugins_Default'),
@@ -391,6 +398,6 @@ return array_replace_recursive([
         'predictable_plugin_order' => false,
     ],
     'logger' => [
-        'level' => $this->Environment() !== 'production' ? Logger::DEBUG : Logger::ERROR
-    ]
+        'level' => $this->Environment() !== 'production' ? Logger::DEBUG : Logger::ERROR,
+    ],
 ], $customConfig);
