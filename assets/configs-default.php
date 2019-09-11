@@ -250,33 +250,33 @@ return array_replace_recursive([
          * of the parameters listed here is matched. This allows the caching system to be more efficient.
          */
         'ignored_url_parameters' => [
-           'pk_campaign',    // Piwik
-           'piwik_campaign',
-           'pk_kwd',
-           'piwik_kwd',
-           'pk_keyword',
-           'pixelId',        // Yahoo
-           'kwid',
-           'kw',
-           'adid',
-           'chl',
-           'dv',
-           'nk',
-           'pa',
-           'camid',
-           'adgid',
-           'utm_term',       // Google
-           'utm_source',
-           'utm_medium',
-           'utm_campaign',
-           'utm_content',
-           'gclid',
-           'cx',
-           'ie',
-           'cof',
-           'siteurl',
-           '_ga',
-           'fbclid',         // Facebook
+            'pk_campaign',    // Piwik
+            'piwik_campaign',
+            'pk_kwd',
+            'piwik_kwd',
+            'pk_keyword',
+            'pixelId',        // Yahoo
+            'kwid',
+            'kw',
+            'adid',
+            'chl',
+            'dv',
+            'nk',
+            'pa',
+            'camid',
+            'adgid',
+            'utm_term',       // Google
+            'utm_source',
+            'utm_medium',
+            'utm_campaign',
+            'utm_content',
+            'gclid',
+            'cx',
+            'ie',
+            'cof',
+            'siteurl',
+            '_ga',
+            'fbclid',         // Facebook
         ],
     ],
     'bi' => [

@@ -1,0 +1,1 @@
+docker build --build-arg SHOPWARE_VERSION=$DOCKER_TAG -f $DOCKERFILE_PATH -t $IMAGE_NAME .
