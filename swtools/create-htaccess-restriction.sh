@@ -6,7 +6,7 @@ if [ ! -z ${HTACCESS_USER} ] && [ ! -z ${HTACCESS_PASSWORD} ]; then
 
     cat >> /shopware/.htaccess <<EOL
 AuthType Basic
-AuthName "Hanser"
+AuthName "${HTACCESS_USER}"
 AuthUserFile /shopware/.htpasswd
 Require valid-user
 EOL
