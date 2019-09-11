@@ -130,17 +130,6 @@ return array_replace_recursive([
     ],
     'errorHandler' => [
         'throwOnRecoverableError' => false,
-        'ignoredExceptionClasses' => [
-            // Disable logging for defined exceptions by class, eg. to disable any logging for CSRF exceptions add this:
-            // \Shopware\Components\CSRFTokenValidationException::class
-            \Shopware\Components\Api\Exception\BatchInterfaceNotImplementedException::class,
-            \Shopware\Components\Api\Exception\CustomValidationException::class,
-            \Shopware\Components\Api\Exception\NotFoundException::class,
-            \Shopware\Components\Api\Exception\OrmException::class,
-            \Shopware\Components\Api\Exception\ParameterMissingException::class,
-            \Shopware\Components\Api\Exception\PrivilegeException::class,
-            \Shopware\Components\Api\Exception\ValidationException::class,
-        ],
     ],
     'db' => [
         'username' => getenv('SWDB_USER'),
@@ -149,12 +138,6 @@ return array_replace_recursive([
         'host' => getenv('SWDB_HOST'),
         'charset' => 'utf8',
         'adapter' => 'pdo_mysql',
-        'pdoOptions' => null,
-        'serverVersion' => null,
-        'defaultTableOptions' => [
-            'charset' => 'utf8',
-            'collate' => 'utf8_unicode_ci',
-        ],
     ],
     'es' => [
         'prefix' => getenv('SWES_PREFIX') ? getenv('SWES_PREFIX') : 'sw_shop',
@@ -167,22 +150,9 @@ return array_replace_recursive([
         'wait_for_status' => 'green',
         'dynamic_mapping_enabled' => true,
         'batchsize' => 500,
-        'index_settings' => [
-            'number_of_shards' => '%shopware.es.number_of_shards%',
-            'number_of_replicas' => '%shopware.es.number_of_replicas%',
-            'max_result_window' => '%shopware.es.max_result_window%',
-            'mapping' => [
-                'total_fields' => [
-                    'limit' => '%shopware.es.total_fields_limit%',
-                ],
-            ],
-        ],
         'backend' => [
-            'prefix' => '%shopware.es.prefix%_backend_index_',
-            'batch_size' => 500,
             'write_backlog' => false,
             'enabled' => false,
-            'index_settings' => '%shopware.es.index_settings%',
         ],
         'client' => [
             'hosts' => [
@@ -196,7 +166,6 @@ return array_replace_recursive([
             'name' => 2,
             'number' => 2,
         ],
-        'debug' => false,
     ],
     'front' => [
         'noErrorHandler' => getenv('SWFRONT_NO_ERROR_HANDLER') == '1' ? true : false,
@@ -413,16 +382,6 @@ return array_replace_recursive([
             'format' => 'A4',
         ],
     ],
-    'media' => [
-        'whitelist' => [],
-    ],
-    'product' => [
-        /*
-         * This regex is used to validate SKUs, aka ordernumbers.
-         * If you change this, please make sure the new format also works in URLs!
-         */
-        'orderNumberRegex' => '/^[a-zA-Z0-9-_.]+$/',
-    ],
     'backward_compatibility' => [
         /*
          * @deprecated since Shopware 5.5
@@ -433,8 +392,5 @@ return array_replace_recursive([
     ],
     'logger' => [
         'level' => $this->Environment() !== 'production' ? Logger::DEBUG : Logger::ERROR,
-    ],
-    'extjs' => [
-        'developer_mode' => false,
     ],
 ], $customConfig);
