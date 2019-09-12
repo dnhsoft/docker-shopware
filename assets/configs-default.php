@@ -382,6 +382,9 @@ return array_replace_recursive([
             'format' => 'A4',
         ],
     ],
+    'media' => [
+        'whitelist' => [],
+    ],
     'backward_compatibility' => [
         /*
          * @deprecated since Shopware 5.5
