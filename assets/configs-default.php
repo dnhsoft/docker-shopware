@@ -166,6 +166,7 @@ return array_replace_recursive([
             'name' => 2,
             'number' => 2,
         ],
+        'debug' => false,
     ],
     'front' => [
         'noErrorHandler' => getenv('SWFRONT_NO_ERROR_HANDLER') == '1' ? true : false,
