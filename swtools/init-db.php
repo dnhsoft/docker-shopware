@@ -15,13 +15,13 @@ echo shell_exec("$mysql_conn -e 'CREATE DATABASE IF NOT EXISTS $SWDB_DATABASE CH
 
 if (file_exists('/swtools/full-custom.sql')) {
 	
-	echo "Full custom database found - importing...";
+	echo "Full custom database found - importing /swtools/full-custom.sql...\n";
 	echo shell_exec("$mysql_conn $SWDB_DATABASE < /swtools/full-custom.sql 2>&1");
-	echo "Custom database imported.";
+	echo "Custom database imported (/swtools/full-custom.sql).\n";
 
 } else {
 
-	echo "Start importing default shopware database entries...";
+	echo "No /swtools/full-custom.sql detected. Importing default shopware database entries...\n";
 
 	include '/swtools/sql-data.php';
 	foreach ($sql_files as $file) {
@@ -35,5 +35,5 @@ if (file_exists('/swtools/full-custom.sql')) {
 		echo "demo.sql imported.";
 	}
 	
-	echo "Default database entries imported.";
+	echo "Default database entries imported.\n";
 }
