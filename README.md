@@ -4,15 +4,12 @@
 - [Example of how to develop a plugin locally](https://github.com/dnhsoft/sw-docker-demo/tree/master/06-develop-a-plugin)
 
 # Supported tags and respective `Dockerfile` links
-- `5.6.0-php7` [5.6.0-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.6.0-php7/Dockerfile)
+Note: Shopware 5.5.7 and above are based on PHP 7.2
+- `5.6.1` [5.6.1/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.6.1/Dockerfile)
 - `5.6.0` [5.6.0/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.6.0/Dockerfile)
-- `5.5.10-php7` [5.5.10-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.5.10-php7/Dockerfile)
 - `5.5.10` [5.5.10/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.5.10/Dockerfile)
-- `5.5.9-php7` [5.5.9-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.5.9-php7/Dockerfile)
 - `5.5.9` [5.5.9/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.5.9/Dockerfile)
-- `5.5.8-php7` [5.5.8-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.5.8-php7/Dockerfile)
 - `5.5.8` [5.5.8/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.5.8/Dockerfile)
-- `5.5.7-php7` [5.5.7-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.5.7-php7/Dockerfile)
 - `5.5.7` [5.5.7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.5.7/Dockerfile)
 - `5.5.6-php7` [5.5.6-php7/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.5.6-php7/Dockerfile)
 - `5.5.6` [5.5.6/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.5.6/Dockerfile)
