@@ -117,7 +117,7 @@ return array_replace_recursive([
             ],
         ],
     ],
-    'csrfProtection' => [
+    'csrfprotection' => [
         'frontend' => getenv('SWCSRFPROTECTION_FRONTEND') == '1' ? true : false,
         'backend' => getenv('SWCSRFPROTECTION_BACKEND') == '1' ? true : false,
     ],
@@ -128,7 +128,7 @@ return array_replace_recursive([
         'writeToIni' => getenv('SWSNIPPET_WRITE_TO_INI') == '1' ? true : false,
         'showSnippetPlaceholder' => getenv('SWSNIPPET_SHOW_SNIPPET_PLACE_HOLDER') == '1' ? true : false,
     ],
-    'errorHandler' => [
+    'errorhandler' => [
         'throwOnRecoverableError' => false,
         'ignoredExceptionClasses' => [
              // Disable logging for defined exceptions by class, eg. to disable any logging for CSRF exceptions add this:
@@ -147,7 +147,8 @@ return array_replace_recursive([
         'password' => getenv('SWDB_PASS'),
         'dbname' => getenv('SWDB_DATABASE'),
         'host' => getenv('SWDB_HOST'),
-        'charset' => 'utf8',
+        'charset' => 'utf8mb4',
+        'timezone' => getenv('SWDB_TZ') ?? getenv('SWPHPSETTINGS_DATE_TIMEZONE') ?? null,
         'adapter' => 'pdo_mysql',
         'pdoOptions' => null,
         'serverVersion' => null,

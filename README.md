@@ -5,6 +5,7 @@
 
 # Supported tags and respective `Dockerfile` links
 Note: Shopware 5.5.7 and above are based on PHP 7.2
+- `5.6.2` [5.6.2/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.6.2/Dockerfile)
 - `5.6.1` [5.6.1/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.6.1/Dockerfile)
 - `5.6.0` [5.6.0/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.6.0/Dockerfile)
 - `5.5.10` [5.5.10/Dockerfile](https://github.com/dnhsoft/docker-shopware/blob/5.5.10/Dockerfile)
