@@ -148,7 +148,7 @@ return array_replace_recursive([
         'dbname' => getenv('SWDB_DATABASE'),
         'host' => getenv('SWDB_HOST'),
         'charset' => 'utf8mb4',
-        'timezone' => getenv('SWDB_TZ') ?? getenv('SWPHPSETTINGS_DATE_TIMEZONE') ?? null,
+        'timezone' => getenv('SWPHPSETTINGS_DATE_TIMEZONE') ?: null,
         'adapter' => 'pdo_mysql',
         'pdoOptions' => null,
         'serverVersion' => null,
