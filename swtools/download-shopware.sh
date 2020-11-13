@@ -1,7 +1,9 @@
 #!/bin/bash
 
 if [ "$SHOPWARE_VERSION" = "latest"  ]; then
-  DOWNLOAD_URL="https://releases.shopware.com/install_5.6.7_8cec71ed6df4804610664944e3f67e5d3a61adea.zip"
+  DOWNLOAD_URL="https://releases.shopware.com/install_5.6.8_7b49bfb8ea0d5269b349722157fe324a341ed28e.zip"
+elif [ "$SHOPWARE_VERSION" = "5.6.8"  ]; then
+  DOWNLOAD_URL="https://releases.shopware.com/install_5.6.8_7b49bfb8ea0d5269b349722157fe324a341ed28e.zip"
 elif [ "$SHOPWARE_VERSION" = "5.6.7"  ]; then
   DOWNLOAD_URL="https://releases.shopware.com/install_5.6.7_8cec71ed6df4804610664944e3f67e5d3a61adea.zip"
 elif [ "$SHOPWARE_VERSION" = "5.6.6"  ]; then

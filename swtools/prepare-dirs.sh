@@ -33,14 +33,14 @@ mkdir -p media/video
 mkdir -p media/temp
 
 
-# echo "Setting rights to /shopware directory, be patient..."
-# chown -R www-data:www-data /shopware
-# echo "Done setting rights to /shopware directory."
+#run in the background as it can be very slow
+chown -R www-data:www-data files media &
+chmod 775 -R files media &
 
 echo "Setting proper mode to various Shopware directories, be patient... "
-chown -R www-data:www-data var/log var/cache web/cache files media \
+chown -R www-data:www-data var/log var/cache web/cache \
     engine/Shopware/Plugins/Community custom/plugins recovery config.php engine/Shopware/Configs/Default.php
-chmod 775 -R var/log var/cache files media engine/Shopware/Plugins/Community 
+chmod 775 -R var/log var/cache engine/Shopware/Plugins/Community
 chmod 544 /shopware/bin/console
 echo "Done setting proper mode to various Shopware directories."
 
