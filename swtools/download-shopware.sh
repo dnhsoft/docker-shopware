@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [ "$SHOPWARE_VERSION" = "latest"  ]; then
-  DOWNLOAD_URL="https://www.shopware.com/en/Download/redirect/version/sw5/file/install_5.6.5_482a9c1c64e67f009c47b25ebbf97a7f9f06066a.zip"
+  DOWNLOAD_URL="https://releases.shopware.com/install_5.6.5_482a9c1c64e67f009c47b25ebbf97a7f9f06066a.zip"
 elif [ "$SHOPWARE_VERSION" = "5.6.5"  ]; then
-  DOWNLOAD_URL="https://www.shopware.com/en/Download/redirect/version/sw5/file/install_5.6.5_482a9c1c64e67f009c47b25ebbf97a7f9f06066a.zip"
+  DOWNLOAD_URL="https://releases.shopware.com/install_5.6.5_482a9c1c64e67f009c47b25ebbf97a7f9f06066a.zip"
 elif [ "$SHOPWARE_VERSION" = "5.6.4"  ]; then
   DOWNLOAD_URL="https://releases.shopware.com/install_5.6.4_3540d53b7727442cde5287b669c7d3b94f8a07c7.zip"
 elif [ "$SHOPWARE_VERSION" = "5.6.3"  ]; then
@@ -27,6 +27,8 @@ else
   exit 1
 fi
 
-#wget -O /shopware/shop.zip $DOWNLOAD_URL
-curl -O -J -L  $DOWNLOAD_URL
-mv install_$SHOPWARE_VERSION*.zip /shopware/shop.zip
+
+wget -O /shopware/shop.zip $DOWNLOAD_URL
+
+#curl -O -J -L  $DOWNLOAD_URL
+#mv install_$SHOPWARE_VERSION*.zip /shopware/shop.zip

@@ -1,4 +1,4 @@
-FROM dnhsoft/shopware-base:php72
+FROM dnhsoft/shopware-base:php74
 
 ARG SHOPWARE_VERSION
 
